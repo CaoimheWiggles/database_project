@@ -9,12 +9,12 @@ mydatabase
 This project is a web-based blog platform focused on providing parenting tips and allowing users to interact through feedback and polls.
 
 
-1. Create the Database: Create a PostgreSQL database with the following name:
+1. Create the Database: 
    - Database Name: `mydatabase`
 
-2. User Credentials: Ensure you have a PostgreSQL user with the following credentials:
+2. User Credentials: 
    - Username: `postgres`
-   - Password: `your_password_here`
+   - Password: `caoimhe`
    - Host: `localhost`
    - Port: `5432`
 
