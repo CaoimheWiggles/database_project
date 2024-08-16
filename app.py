@@ -6,8 +6,12 @@ from datetime import datetime
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
+print(os.getenv('DATABASE_URL'))
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://postgres:caoimhe@localhost:5432/mydatabase')
 app.config['SECRET_KEY'] = 'mydatabase'
+
+
 
 
 
