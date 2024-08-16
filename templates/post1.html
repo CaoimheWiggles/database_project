@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Emotional Availability{% endblock %}
+
+{% block content %}
+    
+    <main>
+        <article class="post-content">
+            <h2>What It Means to Be Emotionally Available to Kids</h2>
+            <br>
+            <img src="{{ url_for('static', filename='images/mother-daughter.jpg') }}" id="featured-images" alt="mother and daughter">
+
+            <section>
+                <h3>Understanding Emotional Availability</h3>
+                <p>Emotional availability entails being there for your child both physically and emotionally. It's about actively 
+                    listening to their feelings, acknowledging their emotions, and providing support when needed. Additionally, it
+                     involves being able to express your own feelings in an appropriate manner. Being emotionally available isn't about 
+                     perfection; it's about creating a nurturing environment where your child feels heard and understood.</p>
+            </section>
+            
+            <section>
+                <h3>Importance of Emotional Availability</h3>
+                <p>Research indicates that children with emotionally available parents tend to have better mental health outcomes, higher
+                     self-esteem, and stronger relationships later in life. When children feel emotionally supported, they are more likely
+                      to develop effective coping mechanisms and a positive sense of self-worth. Moreover, emotional availability fosters 
+                      trust and strengthens the bond between parent and child.</p>
+            </section>
+            
+            <section>
+                <h3>Practical Tips for Enhancing Emotional Availability</h3>
+                <ol>
+                    <li><strong>Be Present:</strong> When your child seeks your attention, strive to be fully engaged and attentive, 
+                        minimizing distractions.</li>
+                    <li><strong>Validate Their Feelings:</strong> Let your child know that their emotions are valid and deserving of 
+                        acknowledgment.</li>
+                    <li><strong>Share Your Own Emotions:</strong> Model healthy emotional expression by openly sharing your feelings in 
+                        an appropriate manner.</li>
+                    <li><strong>Practice Patience:</strong> Recognize that building emotional availability takes time and consistency; 
+                        be patient with your child's journey.</li>
+                </ol>
+            </section>
+            <br>
+            <img src="{{ url_for('static', filename='images/mother-daughter2.jpg') }}" id="featured-images" alt="mother comforting daughter">
+            <hr class="blue-line">
+            <section>
+                <h3>Conclusion</h3>
+                <p>Emotional availability is a fundamental aspect of effective parenting. By actively listening, validating emotions,
+                     and fostering open communication, you create a safe and supportive environment for your child's emotional growth. 
+                     Remember, small gestures of emotional availability can make a significant difference in your child's overall well-
+                     being and development.</p>
+            </section>
+        </article>
+        
+    </main>
+
+    {% endblock %}
