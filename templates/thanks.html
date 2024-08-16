@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Parenting Wisdom{% endblock %}
+
+{% block content %}
+
+<main>
+    <article class="post-content">
+        <h1>Thank you, {{ name }}!</h1>
+        <p>We've received your message and will get back to you shortly.</p>
+    
+
+    <section id="recent-topics">
+        <h3>In the meantime, take a look at some of our most recent topics:</h3>
+        
+    
+    </section>
+
+    <div class="slider-container">
+        <article class="blog-post2">
+            <h2>Juggling Work And Summer Holidays</h2>
+            <p>Here I have some practical tips to help you manage both work and family life during the summer....</p>
+            <br>
+            <a href="{{ url_for('featured_post') }}">Read more</a>
+        </article>
+        <article class="blog-post2">
+            <h2>Parenting Through The Teenage Years</h2>
+            <p>8 Effective Approaches for Navigating Your Child Through Their Adolescent Phase...</p>
+            <br>
+            <a href="{{ url_for('post6') }}">Read more</a>
+        </article>
+        <article class="blog-post2">
+            <h2>Single Parent Triumph: Overcoming with Courage</h2>
+            <p>Being A Single Parent Is Definitely Not Easy.... Here Is Some Advice For Thriving As A Single Parent</p>
+            <a href="{{ url_for('post3') }}">Read more</a>
+        </article>
+    
+      
+        <span class="prev" onclick="prevSlide()">❮</span>
+        <span class="next" onclick="nextSlide()">❯</span>
+    </div>
+</article>
+</main>
+
+
+{% endblock %}

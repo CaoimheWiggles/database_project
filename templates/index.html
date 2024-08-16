@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Parenting Wisdom{% endblock %}
+
+{% block content %}
+
+    <main>
+        <div class="greeting">
+            <h1>{{ greeting }}</h1>
+        </div>
+
+        <section id="featured-post">
+            <h2>Featured Post</h2>
+            <div class="featured-post-content">
+                <div class="post-details">
+                    <h3 id="clickable-title">How to Juggle Being a Working Mother During the Summer Holidays</h3>
+                    <img src="{{ url_for('static', filename='images/working-mum.jpg') }}" alt="Working Mum">
+                    <p>The summer holidays can be a challenging time for working mothers. Balancing work 
+                        commitments with ensuring your children are entertained and cared for requires 
+                        careful planning and flexibility. Here are some practical tips to help you manage 
+                        both work and family life during the summer...</p>
+                    <a href="{{ url_for('featured_post') }}" class="read-more">Read more</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="recent-posts">
+            <h2>Recent Posts</h2>
+            <article>
+                <h3>Nurturing Emotional Intelligence in Children</h3>
+                <p>Emotional availability entails being there for your child both physically and emotionally. 
+                    It's about actively listening to their feelings, acknowledging their emotions, and 
+                    providing support when needed....</p>
+                <a href="{{ url_for('post1') }}">Read more</a>
+            </article>
+            <article>
+                <h3>Navigating The "Terrible Twos": Finding Happiness Amidst the Chaos</h3>
+                <p>As I listen to my friends recount the challenges of parenting teenagers, I find myself eagerly anticipating the joys of potty training,
+                    tantrums, and sippy cups!
+                   While many dread the infamous "terrible twos,"....</p>
+                <a href="{{ url_for('post2') }}">Read more</a>
+            </article>
+        </section>
+
+        <section id="recent-posts">
+            <h2>Popular Posts</h2>
+            <article>
+                <h3>Single Parent Triumph</h3>
+                <img src="{{ url_for('static', filename='images/tired-mum.jpg') }}" id="featured-images" alt="tired mum with two kids awake in bed">
+                <p>Despite the hurdles of single parenting, fostering resilience and maintaining a positive outlook can 
+                    help you overcome these challenges and build a happy and fulfilling life for both you and your 
+                    child....</p>
+                <a href="{{ url_for('post4') }}">Read more</a>
+            </article>
+            <article>
+                <h3>Navigating Screen Time</h3>
+                <img src="{{ url_for('static', filename='images/kids-on-screens.jpg') }}" id="featured-images" alt="four kids sitting on couch with different screens in hand">
+                <p>Balancing your child's engagement with electronic devices is crucial in today's screen-centric 
+                    environment. Although gadgets can occupy them, excessive screen time isn't ideal. Navigating these 
+                    boundaries can be challenging....</p>
+                <a href="{{ url_for('post5') }}">Read more</a>
+            </article>
+
+        
+        </section>
+    </main>
+    
+    {% endblock %}

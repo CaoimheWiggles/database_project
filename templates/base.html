@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Development Dynamics{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="fade-in">
+    <header>
+        <h1>Development Dynamics</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li>
+                    <a href="{{ url_for('blogs') }}">Blogs</a>
+                    <ul class="dropdown-list">
+                        <li><a href="{{ url_for('featured_post') }}">Juggling Working and Summer Holidays</a></li>
+                        <li><a href="{{ url_for('post1') }}">Teaching Children Emotional Intelligence</a></li>
+                        <li><a href="{{ url_for('post2') }}">The Terrible Twos</a></li>
+                        <li><a href="{{ url_for('post3') }}">Dealing With Picky Eaters</a></li>
+                        <li><a href="{{ url_for('post4') }}">Single Parent Triumph</a></li>
+                        <li><a href="{{ url_for('post5') }}">Navigating Screen Time</a></li>
+                        <li><a href="{{ url_for('post6') }}">Parenting Through The Teenage Years</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                
+                {% if 'user_id' in session %}
+                    <li>
+                        <a href="{{ url_for('logout') }}" onclick="return confirm('Are you sure you want to log out?');">Log Out</a>
+                    </li>
+                {% else %}
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <aside>
+        <section id="search">
+            <h2>Search</h2>
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+            <div id="search-results"></div>
+        </section>
+    </aside>
+
+    <footer>
+        <section id="about">
+            <h2>About</h2>
+            <p>Welcome to Development Dynamics, a supportive hub for parents navigating the joys and challenges 
+                of raising children. From sleepless nights to toddler tantrums, we cover it all, showing parents 
+                they're not alone in their journey. Join us for advice, inspiration, and community as we navigate 
+                parenthood together.</p>
+        </section>
+    
+        <section id="contact-info">
+            <h2>Contact</h2>
+            <a href="mailto:developmentdynamics@gmail.com">developmentdynamics@gmail.com</a>
+        </section>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <p>© Development Dynamics</p>
+    </footer>
+</body>
+</html>

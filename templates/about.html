@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Parenting Wisdom{% endblock %}
+
+{% block content %}
+
+    <main>
+        <article class="post-content">
+            <h2>About Us</h2>
+            
+            <section>
+                <h3>Our Mission</h3>
+                <p>At Development Dynamics, our mission is deeply rooted in personal experience. Having grown up
+                     in a broken family, where my father was absent and my mother struggled with emotional 
+                     difficulties, I understand firsthand the impact of childhood experiences on adult life. 
+                     These challenges shaped me, giving rise to a tough exterior masking a yearning for love 
+                     and connection within. Determined to break this cycle and provide a different upbringing 
+                     for my own children, I embarked on a journey of self-discovery and research, seeking to 
+                     understand how to heal from the past and build a brighter future.</p>
+            </section>
+            
+            <section>
+                <h3>Our Values</h3>
+                <ul>
+                    <li><strong>Empathy:</strong> We recognize the complexities of family dynamics and offer a 
+                        compassionate space for parents to navigate their own journeys, free from judgment.</li>
+                    <li><strong>Education:</strong> We share evidence-based insights and practical strategies
+                         gleaned from personal experiences and extensive research, empowering parents to make 
+                         informed decisions and create positive change.</li>
+                    <li><strong>Inclusivity:</strong> We embrace the diversity of family structures and
+                         backgrounds, celebrating the uniqueness of each parenting journey.</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h3>What You'll Find Here</h3>
+                <ul>
+                    <li><strong>Insightful Articles:</strong> Explore a wealth of topics, including healing 
+                        from past trauma, nurturing parent-child relationships, and fostering emotional 
+                        resilience in children.</li>
+                    <li><strong>Practical Guidance:</strong> Discover actionable tips and techniques to 
+                        overcome challenges, promote emotional well-being, and cultivate a loving, supportive 
+                        home environment.</li>
+                </ul>
+            </section>
+            <hr class="blue-line">
+            <section>
+                <h3>Meet the Founder</h3>
+                <img src="{{ url_for('static', filename='images/portrait.jpg') }}" id="featured-images" alt="Working from home">
+
+                <p>Hi, I'm Samantha, the founder of Development Dynamics. My personal experiences have fueled my passion for 
+                    helping parents break free from the patterns of the past and create nurturing, loving homes for their children.
+                     With a background in developmental psychology and hands-on experience as a mother of three, as well as working with
+                      children with disabilities prior to having my own, I am dedicated to providing valuable insights, support, and 
+                      encouragement to fellow parents on their path to positive parenting.</p>
+            </section>
+        </article>
+    </main>
+    
+    {% endblock %}

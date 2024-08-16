@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Working Mothers{% endblock %}
+
+{% block content %}
+    <main>
+        <article class="post-content">
+            <h2>How to Juggle Being a Working Mother During the Summer Holidays</h2>
+            
+            <section>
+                <p>The summer holidays can be a challenging time for working mothers. Balancing work commitments 
+                with ensuring your children are entertained and cared for requires careful planning and 
+                flexibility. Here are some practical tips to help you manage both work and family life 
+                during the summer.</p>
+            </section>
+            
+            <section>
+                <h3>Planning Ahead</h3>
+                <img src="{{ url_for('static', filename='images/planning.jpg') }}" id="featured-images" alt="Writing a plan">
+                <h4>Create a Schedule</h4>
+                <p>Use a calendar to map out work commitments, deadlines, and children's activities. Involve
+                    your children in creating the schedule to ensure they feel included and understand the plan.</p>
+                
+                <h4>Set Priorities</h4>
+                <p>Identify the most important work tasks and deadlines. Plan children's activities around
+                    these priorities.</p>
+                
+                <h4>Backup Plans</h4>
+                <p>Have backup childcare options in case of emergencies or sudden changes.</p>
+            </section>
+            
+            <section>
+                <h3>Flexible Work Arrangements</h3>
+                <img src="{{ url_for('static', filename='images/wfh.jpg') }}" id="featured-images" alt="Working from home">
+                <h4>Discuss with Your Employer</h4>
+                <p>Talk to your employer about flexible working hours or remote work options. Explain your 
+                    situation and propose a plan that ensures productivity.</p>
+                
+                <h4>Time Blocking</h4>
+                <p>Allocate specific blocks of time for work and family activities. Ensure that work time is 
+                    free from distractions.</p>
+                
+                <h4>Use Technology</h4>
+                <p>Utilize productivity tools and apps to stay organized and manage time efficiently.</p>
+            </section>
+            
+            <section>
+                <h3>Engaging Activities for Kids</h3>
+                <img src="{{ url_for('static', filename='images/kids-diy.jpg') }}" id="featured-images" alt="Child doing a craft">
+    
+                <h4>Summer Camps</h4>
+                <p>Research local summer camps or online programs that match your children's interests.
+                    Enroll your kids in activities that keep them engaged and entertained.</p>
+                
+                <h4>DIY Projects and Crafts</h4>
+                <p>Prepare a list of simple DIY projects and crafts that your children can do independently or 
+                    with minimal supervision. Provide all necessary materials and instructions.</p>
+                
+                <h4>Educational Activities</h4>
+                <p>Incorporate educational activities like reading challenges, science experiments, and online 
+                    learning platforms.</p>
+                
+                <h4>Outdoor Activities</h4>
+                <p>Plan regular outdoor activities such as trips to the park, nature walks, and sports.</p>
+            </section>
+            
+            <section>
+                <h3>Self-Care for Mothers</h3>
+                <img src="{{ url_for('static', filename='images/selfcare.jpg') }}" id="featured-images" alt="Women running">
+                <h4>Prioritize Your Health</h4>
+                <p>Ensure you get enough sleep, eat healthily, and exercise regularly. Take short breaks
+                     throughout the day to relax and recharge.</p>
+                
+                <h4>Set Boundaries</h4>
+                <p>Clearly define work and family time to avoid burnout. Communicate your needs to your family 
+                    and ask for their support.</p>
+                
+                <h4>Connect with Other Mothers</h4>
+                <p>Join online communities or local groups of working moms for support and advice. Share 
+                    experiences and tips on managing summer holidays.</p>
+            </section>
+            <hr class="blue-line">
+            <section>
+                <h3>Conclusion</h3>
+                <p>Balancing work and family life during the summer holidays can be challenging, but with 
+                    careful planning, flexibility, and self-care, it can be managed effectively. Share your 
+                    tips and experiences in the comments section below!</p>
+            </section>
+        </article>
+    </main>
+    
+    {% endblock %}

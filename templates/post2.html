@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Terrible Twos{% endblock %}
+
+{% block content %}
+
+    <main>
+        <article class="post-content">
+            <h2>Navigating The "Terrible Twos": Finding Happiness Amidst the Chaos</h2>
+            
+            <section>
+                <p>As I listen to my friends recount the challenges of parenting teenagers, I find myself eagerly anticipating the joys of potty training,
+                     tantrums, and sippy cups!
+                    While many dread the infamous "terrible twos," I've come to see them as a delightful dance of discovery and growth.</p>
+                
+                <p>Make no mistake, the infamous "terrible twos" present their own unique trials, yet they are not inherently more
+                     formidable than any other developmental phase. Unraveling the mysteries of toddlerhood does not need to be a daunting task; 
+                     it's a matter of altering one's perspective and adopting innovative approaches.</p>
+            </section>
+            <br>
+            <h3>How I Changed My Perspective On The Terrible Twos</h3>
+
+            <h4 class="centered">In the realm of child development, there are four key insights to bear in mind when it comes to two-year-olds.</h4>
+
+            <section>
+                <ul class="no-bullets">
+                    <li>
+                        <h3 class="centered">1. The Wonder of Immaturity</h3>
+                        <p>For a considerable period, my views were swayed by the notion that every unruly behavior from a two-year-old warranted punishment, typically in the form of spanking. However, through extensive reading, I came to understand that much of what we perceive as unacceptable behavior in two-year-olds—such as tantrums and exploring household hazards—stems from their immaturity.</p>
+                        <p>Toddlers struggle to articulate their intense emotions verbally, resorting to physical expressions instead. Their lack of impulse control exacerbates the situation. Immaturity, coupled with relentless curiosity, largely drives the behavior dreaded during the "terrible twos."</p>
+                    </li>
+
+                    <li>
+                        <h3 class="centered">2. The Endless Learners</h3>
+                        <p>The initial two years of life witness an onslaught of physical and cognitive development. Throughout the toddler phase, children not only undergo physical growth but also embark on the journey of acquiring human traits.</p>
+                        <p>They absorb cultural norms, language nuances, discern safe from perilous, and endeavor to comprehend the intricacies of the world around them. Mundane objects to adults—such as vacuums, doors, and faucets—are sources of fascination and discovery for toddlers. Much like their earlier milestones of crawling, walking, and speaking, they now fervently educate themselves about their environment—a process that's both exhilarating and exhausting for both parties.</p>
+                    </li>
+
+                    <li>
+                        <h3 class="centered">3. The Boundary Explorers</h3>
+                        <p>My perspective on the toddler years has changed significantly. Instead of seeing two-year-olds as obstinate beings intent on causing frustration, I now view them as curious individuals who are constantly testing boundaries.</p>
+                        <p>As a parent, it's important to establish and enforce boundaries gently. The frequency and intensity of enforcement can vary depending on your toddler's temperament. I've found that reducing the number of boundaries (within safe limits) can make the "terrible twos" more manageable. I aim to say "yes" more often than "no," reserving firm boundaries for behaviors that pose physical dangers.</p>
+                    </li>
+                
+                    <li>
+                        <h3 class="centered">4. The Craving for Compassion</h3>
+                </ul>
+                        <p>Toddlers grapple with frustration for a significant portion of their day. Reflect on this:</p>
+                        <br>
+                        <ol class="no-bullets2">
+                            <li>They yearn to dress independently, yet they're unable.</li>
+                            <li>They long to articulate their emotions, yet they struggle.</li>
+                            <li>They're curious about plugs, yet they lack understanding.</li>
+                            <li>They seek attention amid siblings, yet they're often drowned out.</li>
+                        </ol>
+                        <br>
+                        <p>Life brims with frustration at the tender age of two. Compassion emerges as the paramount need for our toddlers. They crave empathy—to have us walk a mile in their shoes and comprehend life from their diminutive perspective. Empathy serves as a potent antidote to frustration and anger, benefiting both child and caregiver alike (admittedly, a challenge I continue to grapple with!).</p>
+                    </li>
+                
+            </section>
+
+            <div class="bordered-section">
+                <h3 class="centered">Poll: What's The Best Hack For Surviving The Terrible Twos?</h3>
+                <div class="poll-container">
+                    <form id="poll-form">
+                        <label for="routine">
+                            <input type="radio" id="routine" name="activity" value="Keeping a consistent routine"> Keeping a consistent routine
+                        </label>
+                        <label for="positive-reinforcement">
+                            <input type="radio" id="positive-reinforcement" name="activity" value="Using positive reinforcement"> Using positive reinforcement
+                        </label>
+                        <label for="clear-boundaries">
+                            <input type="radio" id="clear-boundaries" name="activity" value="Setting clear boundaries"> Setting clear boundaries
+                        </label>
+                        <label for="distraction">
+                            <input type="radio" id="distraction" name="activity" value="Distracting with activities"> Distracting with activities
+                        </label>
+                        <button type="submit">Vote</button>
+                    </form>
+                    <div id="poll-results" class="poll-results">
+                        {% for activity, votes in poll_results.items() %}
+                            <div class="result-box" data-votes="{{ votes }}">{{ activity }}: {{ votes }} votes</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="{{ url_for('static', filename='images/terrible-twos.jpg') }}" id="featured-images" alt="Two toddlers in flooded kitchen">
+            <br>
+            <h3>Strategies to Navigate the "Terrible Twos"</h3>
+
+
+            <h4 class="centered">When confronting the tumultuous terrain of toddlerhood, here are seven strategies to navigate the challenges:</h4>
+            <section>
+                <ul class="no-bullets">
+                    <li>
+                        <h3 class="centered">1. Establish a Safe Haven</h3>
+                        <p>Creating a secure environment is paramount during the "terrible twos." By childproofing your home and
+                            eliminating potential hazards, you minimize the need for constant supervision and reduce the likelihood of 
+                            tantrums.</p>
+                    </li>
+                    <li>
+                        <h3 class="centered">2. Embrace Routine</h3>
+                        <p>Consistency is key in managing toddler behavior. Establishing a regular sleep schedule helps regulate 
+                            their mood and energy levels, fostering a more harmonious household dynamic.</p>
+                    </li>
+                
+                    <li>
+                        <h3 class="centered">3. Navigate Transitions with Care</h3>
+                        <p>Transitions can be tumultuous for toddlers. Ease their apprehension by providing gentle transitions and acknowledging their emotions. Saying goodbye to activities or places they enjoy helps them navigate change with greater ease.</p>
+                    </li>
+                
+                    <li>
+                        <h3 class="centered">4. Foster Emotional Expression</h3>
+                        <p>Encourage toddlers to articulate their feelings by providing them with the vocabulary to express themselves. Verbalizing emotions helps them understand and manage their internal state, reducing frustration and outbursts.</p>
+                    </li>
+                
+                    <li>
+                        <h3 class="centered">5. Keep Them Engaged</h3>
+                        <p>Active toddlers are happy toddlers. Regular outings to parks, playgrounds, and nature trails provide ample opportunities for exploration and physical activity, channeling their boundless energy in constructive ways.</p>
+                    </li>
+                
+                    <li>
+                        <h3 class="centered">6. Implement Positive Discipline</h3>
+                        <p>Replace punitive measures with positive discipline techniques that emphasize redirection and reinforcement. By setting clear boundaries and offering praise for desired behavior, you create a nurturing environment that promotes cooperation and mutual respect.</p>
+                    </li>
+                
+                    <li>
+                        <h3 class="centered">7. Embrace Outdoor Adventures</h3>
+                        <p>Nature serves as a natural antidote to toddler meltdowns. Spend quality time outdoors, engaging in activities like bike rides, nature walks, and backyard play. The fresh air and open space provide toddlers with sensory stimulation and a sense of freedom, fostering their overall well-being.</p>
+                    </li>
+                </ul>
+
+                <hr class="blue-line">
+                <h3 class="centered">Conclusion</h3>
+                <p> The "terrible twos" may seem challenging, but they're also filled with moments of joy and discovery that you'll miss once they're gone. Despite the tantrums and defiance, there's a sweetness to this stage of childhood that is fleeting. Embrace the chaos, 
+                cherish the milestones, and remember that these moments, though trying, are a precious part of your parenting journey.</p>
+        
+        </article>
+
+       
+
+    </main>
+    {% endblock %}

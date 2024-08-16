@@ -1,0 +1,78 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Home - Parenting Wisdom{% endblock %}
+
+{% block content %}
+
+    <main>
+        <div id="blog-container">
+            <article class="blog-post">
+                <h2>Juggling Work And Summer Holidays</h2>
+                <img src="{{ url_for('static', filename='images/wfh.jpg') }}" id="featured-images" alt="Working from home">
+                <br>
+                <p>Here I have some practical tips to help you manage both work and family life during the summer....</p>
+                <a href="{{ url_for('featured_post') }}">Read more</a>
+            </article>
+            
+            <article class="blog-post">
+                <h2>Nurturing Emotional Intelligence in Children</h2>
+                <img src="{{ url_for('static', filename='images/mother-daughter.jpg') }}" id="featured-images" alt="mother and daughter">
+                <br>
+                <p>Top Tips On Becoming More Emotionally Available That Will Help Improve Your Childs Life...</p>
+                <a href="{{ url_for('post1') }}">Read more</a>
+            </article>
+        
+            <article class="blog-post">
+                <h2>The "Terrible Twos"</h2>
+                <img src="{{ url_for('static', filename='images/terrible-twos.jpg') }}" id="featured-images" alt="two kids in flooded kitchen">
+                <br>
+                <p>How I Changed My Perspective On The Terrible Twos</p>                             
+                <a href="{{ url_for('post2') }}">Read more</a>
+            </article>
+        
+            <article class="blog-post">
+                <h2>Dealing With Picky Eaters</h2>
+                <img src="{{ url_for('static', filename='images/picky-eaters.jpg') }}" id="featured-images" alt="child disgusted by healthy food">
+                <br>
+                <p>16 Useful Tips to Try if Your Child is a Picky Eater..</p>
+                <a href="{{ url_for('post3') }}">Read more</a>
+            </article>
+        
+            <article class="blog-post">
+                <h2>Single Parent Triumph</h2>
+                <img src="{{ url_for('static', filename='images/single-parent.jpg') }}" id="featured-images" alt="mother and child">
+                <br>
+                <p>Being A Single Parent Is Definitely Not Easy.... Here Is Some Advice For Thriving As A Single Parent</p>
+                <a href="{{ url_for('post4') }}">Read more</a>
+            </article>
+        
+            <article class="blog-post">
+                <h2>Navigating Screen Time</h2>
+                <img src="{{ url_for('static', filename='images/screentime.jpg') }}" id="featured-images" alt="child watching tv">
+                <br>
+                <p>9 Strategies To Determine A Healthy and Reasonable Limit On Screen Time...</p>
+                <a href="{{ url_for('post5') }}">Read more</a>
+            </article>
+        
+            <article class="blog-post">
+                <h2>Parenting Through The Teenage Years</h2>
+                <img src="{{ url_for('static', filename='images/teenager.jpg') }}" id="featured-images" alt="mother trying to talk to moody daughter">
+                <br>
+                <p>8 Effective Approaches for Navigating Your Child Through Their Adolescent Phase...</p>
+                <a href="{{ url_for('post6') }}">Read more</a>
+            </article>
+
+            <article class="blog-post">
+                <h2>New Content Coming Soon..</h2>
+                <br>
+                <h4>Coming Tomorrow... Understanding and Managing Childhood Anxiety: Tips for Parents</h4>
+                <br>
+                <p>We upload new content daily! Stay tuned!</p>
+
+                
+            </article>
+        </div>
+    </main>
+    
+    {% endblock %}

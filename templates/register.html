@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Register - Parenting Wisdom{% endblock %}
+
+{% block content %}
+
+
+<main>
+    <article class="post.content">
+    <section id="contact-box" class="contact-content">
+        <div class="contact-container">
+            <form method="POST" action="{{ url_for('register') }}" class="form-container">
+                <h2>Register</h2>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            </div>
+            
+        </div>
+    </section>
+
+    </article>
+     {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+</main>
+
+
+
+{% endblock %}

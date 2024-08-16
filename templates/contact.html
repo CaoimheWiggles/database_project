@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Parenting Wisdom{% endblock %}
+
+{% block content %}
+
+    <main>
+        <article class="post.content">
+        <section id="contact-box" class="contact-content">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <p>Feel free to contact us about anything! Whether you have suggestions for topics you'd like us to cover, concerns,
+                     or just want to say hello, we're here to listen.</p>
+                <div class="contact-form">
+                    <form action="{{ url_for('contact') }}" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <p>Or you can email us at: <a href="mailto:developmentdynamics@gmail.com">developmentdynamics@gmail.com</a></p>
+            </div>
+        </section>
+        
+        {% if 'user_id' in session %}
+<aside id="feedback">
+    <div id="feedback-form">
+        <h2>Leave Your Feedback</h2>
+        <form action="{{ url_for('feedback') }}" method="POST">
+            <textarea name="feedback_message" rows="4" placeholder="Your feedback here..." required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</aside>
+
+{% else %}
+<aside id="feedback">
+    <div id="feedback-form">
+        <h2>Leave Your Feedback</h2>
+        <p>You need to be logged in to leave feedback. <a href="{{ url_for('login') }}">Log in here</a>.</p>
+    </div>
+</aside>
+{% endif %}
+
+        </aside>
+        </article>
+    </main>
+    
+    {% endblock %}
