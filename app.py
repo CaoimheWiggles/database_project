@@ -6,9 +6,9 @@ from datetime import datetime
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:caoimhe@localhost:5432/mydatabase'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'postgresql://postgres:caoimhe@localhost:5432/mydatabase')
 app.config['SECRET_KEY'] = 'mydatabase'
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///default.db')
+
 
 
 
